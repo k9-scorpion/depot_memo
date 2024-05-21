@@ -1,0 +1,6 @@
+pour l'administrateur
+username : admin
+password: admin
+pour l'utilisateur
+username : Hassan
+password: hassan123
