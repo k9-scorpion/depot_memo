@@ -8,6 +8,7 @@ require_once ('connect.php');
               $Domaine = $_POST['domaine'];
               $Filiere = $_POST['filiere'];
               $Universite = $_POST['universite'];
+              $Resume = $_POST['resume'];
               $Annee = $_POST['annee'];
               $fileName = $_FILES['theme']['name'];   
               $fileTmpName = $_FILES['theme']['tmp_name']; 
@@ -17,8 +18,8 @@ require_once ('connect.php');
 //              $traget="files/".$_FILES['img']['name'];
 //              move_uploaded_file($image,$traget);
                 
-    $reqajout = "INSERT INTO `memoire` (titre,auteur,domaine,Filiere,universite,annee,theme) values
- ('$Titre','$Auteur','$Domaine','$Filiere','$Universite','$Annee','$fileName')";
+    $reqajout = "INSERT INTO `memoire` (titre,auteur,domaine,Filiere,universite,resume,annee,theme) values
+ ('$Titre','$Auteur','$Domaine','$Filiere','$Universite',' $Resume','$Annee','$fileName')";
              $resultat= mysqli_query($con,$reqajout);
              if ($resultat) {
                  move_uploaded_file($fileTmpName,$path);
@@ -111,6 +112,12 @@ require_once ('connect.php');
           <label for="input1" class="col-sm-2 control-label">Université</label>
           <div class="col-sm-5">
             <input type="text" name="universite" placeholder="Université" class="form-control" id="input1">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="input1" class="col-sm-2 control-label">Resumé</label>
+          <div class="col-sm-5">
+            <input type="text" name="resume" placeholder="resume" class="form-control" id="input1">
           </div>
         </div>
         <div class="form-group">

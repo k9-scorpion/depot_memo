@@ -96,6 +96,13 @@ require_once ('connect.php');
             <input type="text" name="universite" placeholder="Université" class="form-control" id="input1"
             value="<?php echo $r['universite'] ?>">
           </div>
+           <div class="form-group">
+          <label for="input1" class="col-sm-2 control-label">Resumé</label>
+          <div class="col-sm-10">
+            <input type="text" name="resume" placeholder="resume" class="form-control" id="input1"
+            value="<?php echo $r['resume'] ?>">
+          </div>
+        </div>
         </div>
          <div class="form-group">
           <label for="input1" class="col-sm-2 control-label">Année</label>
